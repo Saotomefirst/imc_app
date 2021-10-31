@@ -1,10 +1,10 @@
 <?xml version="1.0" encoding="utf-8"?>
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
+    xmlns:tools="http://schemas.android.com/tools"
     android:orientation="vertical"
-    android:layout_gravity=""
-    android:layout_height="match_parent"
-    >
+    android:gravity="center"
+    android:layout_height="match_parent">
 
     <TextView
         android:id="@+id/textView"
@@ -14,11 +14,14 @@
         style="@style/title_purple" />
     <TextView
         android:id="@+id/textView2"
+        android:layout_gravity="start"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="@string/hello_world"
         style="@style/title_purple"
         android:background="@color/button_color"
+        android:layout_marginTop="24dp"
+        android:padding="16dp"
         />
 
     <RadioButton
@@ -27,6 +30,8 @@
         android:layout_height="wrap_content"
         android:text="@string/hi_radio"
         style="@style/title_purple"
+        android:visibility="invisible"
+        tools:visibility="visible"
         />
 
     <CheckBox
