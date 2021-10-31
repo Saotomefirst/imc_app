@@ -10,31 +10,32 @@
         android:id="@+id/textView"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Hello World"
+        android:text="@string/hello_world"
         style="@style/title_purple" />
     <TextView
         android:id="@+id/textView2"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Hello World"
+        android:text="@string/hello_world"
         style="@style/title_purple"
+        android:background="@color/button_color"
         />
 
     <RadioButton
         android:textSize="24sp"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Meu RadioButton"
+        android:text="@string/hi_radio"
         style="@style/title_purple"
-        ></RadioButton>
+        />
 
     <CheckBox
         android:textSize="24sp"
         android:textColor="@color/teal_700"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Meu Checkbox"
+        android:text="@string/hi_checkbox"
         style="@style/title_purple"
-        ></CheckBox>
+        />
 
 </LinearLayout>
