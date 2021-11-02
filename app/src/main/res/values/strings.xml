@@ -3,4 +3,9 @@
     <string name="hello_world">Olá Mundo!</string>
     <string name="hi_radio">Meu RadioButton</string>
     <string name="hi_checkbox">Meu Checkbox</string>
+    <string name="imc_titulo">IMC</string>
+    <string name="imc_mensagem">Insira seu Peso (Kg) e Altura (cm)</string>
+    <string name="imc_botao_calcular">Calcular</string>
+    <string name="altura_cm">170 (cm)</string>
+    <string name="peso_kg">90 (Kg)</string>
 </resources>
