@@ -1,25 +1,87 @@
 <?xml version="1.0" encoding="utf-8"?>
-<androidx.appcompat.widget.LinearLayoutCompat xmlns:android="http://schemas.android.com/apk/res/android"
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/relativeLayout"
     android:layout_width="match_parent"
-    android:layout_height="match_parent"
-    android:orientation="vertical"
-    android:gravity="center"
-    tools:context=".MainActivity">
+    android:layout_height="match_parent">
 
-    <TextView
-        android:id="@+id/titleTXT"
+    <androidx.constraintlayout.widget.Group
+        android:id="@+id/grupo"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="@string/imc_titulo"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintLeft_toLeftOf="parent"
-        app:layout_constraintRight_toRightOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        style="@style/app_titulo"/>
-
+        app:constraint_referenced_ids="titleTXT,calcularBTN"
+        android:visibility="visible"
+        />
+    
     <TextView
+        android:id="@+id/titleTXT"
+        style="@style/app_titulo"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:text="@string/imc_titulo"
+        android:textAlignment="center"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        tools:visibility="visible"
+        android:layout_marginTop="48dp"
+        />
+
+    <EditText
+        android:id="@+id/pesoEDT"
+        style="@style/input_style"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true"
+        android:layout_centerVertical="true"
+        android:layout_marginHorizontal="48dp"
+        android:layout_marginStart="24dp"
+        android:layout_marginEnd="24dp"
+        android:hint="@string/peso_kg"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.23000002" />
+
+    <EditText
+        android:id="@+id/alturaEDT"
+        style="@style/input_style"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="@string/altura_cm"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/pesoEDT"
+        tools:visibility="visible" />
+
+    <Button
+        android:id="@+id/calcularBTN"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:backgroundTint="@android:color/holo_green_dark"
+        android:padding="16dp"
+        android:text="@string/imc_botao_calcular"
+        android:textSize="24dp"
+        android:layout_marginBottom="4dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="@id/guidelineBaixo"
+        android:layout_marginHorizontal="24dp"
+        tools:visibility="visible"
+    />
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/guidelineBaixo"
+        app:layout_constraintGuide_percent="0.80"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        />
+
+
+    <!--TextView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="@string/imc_mensagem"
@@ -28,30 +90,6 @@
         app:layout_constraintRight_toRightOf="parent"
         app:layout_constraintTop_toTopOf="parent"
         android:textSize="24sp"
-        />
+        /-->
 
-    <EditText
-        android:id="@+id/pesoEDT"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:hint="@string/peso_kg"
-        style="@style/input_style" />
-
-    <EditText
-        android:id="@+id/alturaEDT"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        style="@style/input_style"
-        android:hint="@string/altura_cm"
-        />
-
-    <Button
-        android:id="@+id/calcularBTN"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="@string/imc_botao_calcular"
-        android:layout_marginTop="46dp"
-        android:padding="16dp"
-        />
-
-</androidx.appcompat.widget.LinearLayoutCompat>
+</androidx.constraintlayout.widget.ConstraintLayout>
